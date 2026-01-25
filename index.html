@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Login Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": {
+                           DEFAULT: "#0D9488",
+                           light: "#F0FDFA",
+                           dark: "#042F2E",
+                        },
+                        "secondary": "#FB923C",
+                        "background-light": "#F8FAFC",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light font-display text-gray-700">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4">
+<div class="w-full max-w-md space-y-8">
+<div class="text-center">
+<div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary-light text-primary">
+<span class="material-symbols-outlined text-4xl">solar_power</span>
+</div>
+<h1 class="mt-4 text-[32px] font-bold tracking-tight text-gray-900">Admin Panel Login</h1>
+<p class="mt-2 text-gray-500">Welcome back, please sign in to your account.</p>
+</div>
+<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+<form class="space-y-6">
+<div>
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-gray-700">Email Address</p>
+<input class="form-input h-12 w-full flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-gray-50 p-3 text-base placeholder:text-gray-400 focus:border-primary focus:ring-primary/50" placeholder="Enter your email" type="email" value=""/>
+</label>
+</div>
+<div>
+<label class="flex flex-col">
+<div class="flex items-center justify-between">
+<p class="pb-2 text-sm font-medium text-gray-700">Password</p>
+<a class="text-sm font-medium text-secondary hover:text-secondary/80" href="#">Forgot Password?</a>
+</div>
+<div class="flex w-full flex-1 items-stretch rounded-lg">
+<input class="form-input h-12 w-full flex-1 resize-none overflow-hidden rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 p-3 pr-2 text-base placeholder:text-gray-400 focus:border-primary focus:ring-primary/50" placeholder="Enter your password" type="password" value=""/>
+<div class="flex items-center justify-center rounded-r-lg border border-l-0 border-gray-300 bg-gray-50 pr-3 text-gray-400">
+<span class="material-symbols-outlined cursor-pointer">visibility</span>
+</div>
+</div>
+</label>
+</div>
+<div>
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-gray-700">Role</p>
+<select class="form-select h-12 w-full flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-gray-50 p-3 text-base text-gray-700 focus:border-primary focus:ring-primary/50">
+<option value="one">Select your role</option>
+<option value="two">Super Admin</option>
+<option value="three">Content Manager</option>
+<option value="four">Sales Representative</option>
+</select>
+</label>
+</div>
+<div>
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-gray-700">Two-Factor Authentication Code</p>
+<input class="form-input h-12 w-full flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 bg-gray-50 p-3 text-center text-base tracking-[0.5em] placeholder:tracking-normal placeholder:text-gray-400 focus:border-primary focus:ring-primary/50" maxlength="6" placeholder="Enter 6-digit code" type="text" value=""/>
+</label>
+</div>
+<div>
+<button class="flex h-12 w-full items-center justify-center rounded-lg bg-primary px-4 py-2 text-base font-semibold text-white transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2" type="submit">
+                            Sign In
+                        </button>
+</div>
+</form>
+<div class="pt-6">
+<details class="group">
+<summary class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-900">
+<span>Advanced Security Settings</span>
+<span class="transition-transform group-open:rotate-180">
+<span class="material-symbols-outlined text-gray-500">expand_more</span>
+</span>
+</summary>
+<div class="mt-4 space-y-4 border-t border-gray-200 pt-4">
+<div class="flex items-center justify-between">
+<label class="text-sm font-medium text-gray-700" for="ip-toggle">Restrict login to specific IP addresses</label>
+<label class="relative inline-flex cursor-pointer items-center">
+<input class="peer sr-only" id="ip-toggle" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/30"></div>
+</label>
+</div>
+<div>
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium text-gray-700">Whitelisted IP Addresses (one per line)</p>
+<textarea class="form-textarea w-full flex-1 resize-y overflow-hidden rounded-lg border border-gray-300 bg-gray-50 p-3 text-base placeholder:text-gray-400 focus:border-primary focus:ring-primary/50" placeholder="e.g. 192.168.1.1
+127.0.0.1" rows="3"></textarea>
+</label>
+</div>
+</div>
+</details>
+</div>
+</div>
+<p class="flex items-center justify-center gap-2 text-center text-sm text-gray-500">
+<span class="material-symbols-outlined text-base">lock</span>
+    Your connection is secure.
+</p>
+</div>
+</div>
+
+</body></html>
