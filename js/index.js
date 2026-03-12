@@ -1,26 +1,16 @@
-//login page
 tailwind.config = {
   darkMode: "class",
   theme: {
     extend: {
       colors: {
-        "primary": {
-          DEFAULT: "#0D9488",
-          light: "#F0FDFA",
-          dark: "#042F2E",
-        },
-        "secondary": "#FB923C",
-        "background-light": "#F8FAFC",
+        "primary": "#13ecc8",
+        "background-light": "#f6f8f8",
+        "background-dark": "#10221f",
       },
       fontFamily: {
-        "display": ["Inter", "sans-serif"]
+        "display": ["Space Grotesk", "sans-serif"]
       },
-      borderRadius: {
-        "DEFAULT": "0.5rem",
-        "lg": "0.5rem",
-        "xl": "0.75rem",
-        "full": "9999px"
-      },
+      borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
     },
   },
 }
