@@ -1,3 +1,7 @@
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.chart-gradient {
+  background: linear-gradient(180deg, rgba(19, 236, 200, 0.2) 0%, rgba(19, 236, 200, 0) 100%);
 }

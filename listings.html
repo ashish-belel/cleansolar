@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SolarAdmin - Listings Approval</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/listings.css" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside
+      class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col fixed h-full">
+      <div class="p-6 flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-slate-900">
+          <span class="material-symbols-outlined text-2xl">wb_sunny</span>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold leading-tight">SolarAdmin</h1>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Management Portal</p>
+        </div>
+      </div>
+      <nav class="flex-1 px-4 mt-4 space-y-1">
+        <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span class="text-sm font-medium">Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-3 rounded-lg active-link text-slate-900 dark:text-slate-100 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">inventory_2</span>
+          <span class="text-sm font-medium">Listings</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">group</span>
+          <span class="text-sm font-medium">Sellers</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">bar_chart</span>
+          <span class="text-sm font-medium">Analytics</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">settings</span>
+          <span class="text-sm font-medium">Settings</span>
+        </a>
+      </nav>
+      <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+        <div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 dark:bg-slate-800">
+          <div
+            class="w-8 h-8 rounded-full bg-slate-300 dark:bg-slate-600 flex items-center justify-center overflow-hidden">
+            <img class="w-full h-full object-cover" data-alt="User profile avatar of admin"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXxbp3l7vNoVaoyW7hJKKl-RwSejxojLxjvBBUz9yxZCbGQ5YhvwzDtowAEwi7g_RXuxfFte7GfkbDxl2rbXRb7q1cKCNZLKvki8ytieLLhLIpD9jNeyhf9-6EqUVJpCMZLL2XPEzJCjS2tUOFeLUg70YqfgIgWUzjWqcTfnu09aeyhqVjkOuWOTnWlVYGfD6jpCfrDyADC8rdxDiH2Z1Evgl3ROcL52X6pez4qKpfyi19bzIN-1OuxHsCwdwVEzA1Ar6lVfW60z9R" />
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-xs font-bold truncate">Alex Rivard</p>
+            <p class="text-[10px] text-slate-500">Super Admin</p>
+          </div>
+          <span class="material-symbols-outlined text-sm text-slate-400">logout</span>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="flex-1 ml-64 flex flex-col">
+      <!-- Header -->
+      <header
+        class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex items-center justify-between px-8 sticky top-0 z-10">
+        <div class="flex items-center gap-4">
+          <h2 class="text-xl font-bold">Listings Approval</h2>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative w-64">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+            <input
+              class="w-full pl-10 pr-4 py-1.5 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm focus:ring-primary focus:border-primary transition-all"
+              placeholder="Search listing ID..." type="text" />
+          </div>
+          <button class="relative text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">notifications</span>
+            <span
+              class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+          </button>
+          <button
+            class="flex items-center gap-2 bg-primary text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:brightness-110 transition-all">
+            <span class="material-symbols-outlined text-sm">download</span>
+            Export Report
+          </button>
+        </div>
+      </header>
+      <!-- Dashboard Stats -->
+      <div class="p-8">
+        <div class="flex flex-col gap-2 mb-8">
+          <h3 class="text-3xl font-black tracking-tight">Pending Approvals</h3>
+          <p class="text-slate-500 dark:text-slate-400">Review and verify the hardware health of refurbished solar
+            panels before listing.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col gap-2">
+            <p class="text-sm font-medium text-slate-500">Pending Review</p>
+            <div class="flex items-end justify-between">
+              <h4 class="text-3xl font-bold">42</h4>
+              <span class="text-xs font-bold text-amber-500 px-2 py-1 bg-amber-50 dark:bg-amber-500/10 rounded-full">+12
+                today</span>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col gap-2">
+            <p class="text-sm font-medium text-slate-500">Avg. Health Score</p>
+            <div class="flex items-end justify-between">
+              <h4 class="text-3xl font-bold">88%</h4>
+              <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded-full">Good condition</span>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col gap-2">
+            <p class="text-sm font-medium text-slate-500">System Uptime</p>
+            <div class="flex items-end justify-between">
+              <h4 class="text-3xl font-bold">99.9%</h4>
+              <span class="text-xs font-bold text-slate-400 px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">No
+                alerts</span>
+            </div>
+          </div>
+        </div>
+        <!-- Tabs -->
+        <div class="flex border-b border-slate-200 dark:border-slate-800 mb-6 gap-8">
+          <button
+            class="pb-4 text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">All
+            Listings</button>
+          <button class="pb-4 text-sm font-bold border-b-2 border-primary text-slate-900 dark:text-slate-100">Pending
+            Approvals</button>
+          <button
+            class="pb-4 text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Flagged
+            Items</button>
+        </div>
+        <!-- Data Table -->
+        <div
+          class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-50 dark:bg-slate-800/50">
+                <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Listing ID</th>
+                <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Seller/Source</th>
+                <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Product Type</th>
+                <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Health Score</th>
+                <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Status</th>
+                <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+              <!-- Row 1 -->
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4">
+                  <span class="font-bold">#SL-4829</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+                    <span class="text-sm font-medium">EcoPower Solutions</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="text-sm">Monocrystalline (Refurbished)</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 h-1.5 w-16 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                      <div class="h-full bg-primary" style="width: 92%;"></div>
+                    </div>
+                    <span class="text-sm font-bold text-primary">92%</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+                    Pending
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-right space-x-2">
+                  <button class="p-1 text-primary hover:bg-primary/10 rounded transition-colors" title="Approve">
+                    <span class="material-symbols-outlined">check_circle</span>
+                  </button>
+                  <button
+                    class="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded transition-colors"
+                    title="Edit">
+                    <span class="material-symbols-outlined">edit_note</span>
+                  </button>
+                  <button class="p-1 text-red-400 hover:text-red-600 rounded transition-colors" title="Remove">
+                    <span class="material-symbols-outlined">delete_forever</span>
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 2 -->
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4">
+                  <span class="font-bold">#SL-4831</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+                    <span class="text-sm font-medium">SunVault Systems</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="text-sm">Polycrystalline (Used)</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 h-1.5 w-16 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                      <div class="h-full bg-amber-500" style="width: 76%;"></div>
+                    </div>
+                    <span class="text-sm font-bold text-amber-500">76%</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+                    Pending
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-right space-x-2">
+                  <button class="p-1 text-primary hover:bg-primary/10 rounded transition-colors" title="Approve">
+                    <span class="material-symbols-outlined">check_circle</span>
+                  </button>
+                  <button
+                    class="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded transition-colors"
+                    title="Edit">
+                    <span class="material-symbols-outlined">edit_note</span>
+                  </button>
+                  <button class="p-1 text-red-400 hover:text-red-600 rounded transition-colors" title="Remove">
+                    <span class="material-symbols-outlined">delete_forever</span>
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 3 -->
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4">
+                  <span class="font-bold">#SL-4835</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+                    <span class="text-sm font-medium">Renew Grid</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="text-sm">Thin-Film (Refurbished)</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 h-1.5 w-16 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                      <div class="h-full bg-primary" style="width: 85%;"></div>
+                    </div>
+                    <span class="text-sm font-bold text-primary">85%</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+                    Pending
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-right space-x-2">
+                  <button class="p-1 text-primary hover:bg-primary/10 rounded transition-colors" title="Approve">
+                    <span class="material-symbols-outlined">check_circle</span>
+                  </button>
+                  <button
+                    class="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded transition-colors"
+                    title="Edit">
+                    <span class="material-symbols-outlined">edit_note</span>
+                  </button>
+                  <button class="p-1 text-red-400 hover:text-red-600 rounded transition-colors" title="Remove">
+                    <span class="material-symbols-outlined">delete_forever</span>
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 4 -->
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4">
+                  <span class="font-bold">#SL-4840</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+                    <span class="text-sm font-medium">Urban Solar Hub</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="text-sm">Monocrystalline (Used)</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 h-1.5 w-16 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                      <div class="h-full bg-red-500" style="width: 42%;"></div>
+                    </div>
+                    <span class="text-sm font-bold text-red-500">42%</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+                    Pending
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-right space-x-2">
+                  <button class="p-1 text-primary hover:bg-primary/10 rounded transition-colors" title="Approve">
+                    <span class="material-symbols-outlined">check_circle</span>
+                  </button>
+                  <button
+                    class="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded transition-colors"
+                    title="Edit">
+                    <span class="material-symbols-outlined">edit_note</span>
+                  </button>
+                  <button class="p-1 text-red-400 hover:text-red-600 rounded transition-colors" title="Remove">
+                    <span class="material-symbols-outlined">delete_forever</span>
+                  </button>
+                </td>
+              </tr>
+              <!-- Row 5 -->
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4">
+                  <span class="font-bold">#SL-4845</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+                    <span class="text-sm font-medium">Peak Watts Co.</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="text-sm">Bifacial (Refurbished)</span>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-2">
+                    <div class="flex-1 h-1.5 w-16 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                      <div class="h-full bg-primary" style="width: 96%;"></div>
+                    </div>
+                    <span class="text-sm font-bold text-primary">96%</span>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+                    Pending
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-right space-x-2">
+                  <button class="p-1 text-primary hover:bg-primary/10 rounded transition-colors" title="Approve">
+                    <span class="material-symbols-outlined">check_circle</span>
+                  </button>
+                  <button
+                    class="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded transition-colors"
+                    title="Edit">
+                    <span class="material-symbols-outlined">edit_note</span>
+                  </button>
+                  <button class="p-1 text-red-400 hover:text-red-600 rounded transition-colors" title="Remove">
+                    <span class="material-symbols-outlined">delete_forever</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Pagination -->
+          <div
+            class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 flex items-center justify-between border-t border-slate-200 dark:border-slate-800">
+            <span class="text-xs text-slate-500 font-medium">Showing 1-5 of 42 results</span>
+            <div class="flex gap-2">
+              <button
+                class="px-3 py-1 text-xs font-bold border border-slate-200 dark:border-slate-700 rounded bg-white dark:bg-slate-900 hover:bg-slate-50 transition-colors">Previous</button>
+              <button
+                class="px-3 py-1 text-xs font-bold bg-primary text-slate-900 rounded hover:brightness-110 transition-colors">1</button>
+              <button
+                class="px-3 py-1 text-xs font-bold border border-slate-200 dark:border-slate-700 rounded bg-white dark:bg-slate-900 hover:bg-slate-50 transition-colors">2</button>
+              <button
+                class="px-3 py-1 text-xs font-bold border border-slate-200 dark:border-slate-700 rounded bg-white dark:bg-slate-900 hover:bg-slate-50 transition-colors">3</button>
+              <button
+                class="px-3 py-1 text-xs font-bold border border-slate-200 dark:border-slate-700 rounded bg-white dark:bg-slate-900 hover:bg-slate-50 transition-colors">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/listings.js"></script>
+</body>
+</html>

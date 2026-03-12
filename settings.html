@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SolarAdmin - Settings</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/settings.css" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+  <div class="flex h-screen overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="w-64 flex-shrink-0 border-r border-primary/10 bg-white dark:bg-slate-900 flex flex-col">
+      <div class="p-6">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-slate-900">
+            <span class="material-symbols-outlined">wb_sunny</span>
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-none">SolarAdmin</h1>
+            <p class="text-primary text-xs font-medium">Management Portal</p>
+          </div>
+        </div>
+        <nav class="space-y-1">
+          <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 rounded-lg transition-colors"
+            href="#">
+            <span class="material-symbols-outlined text-[20px]">dashboard</span>
+            <span class="text-sm font-medium">Dashboard</span>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 rounded-lg transition-colors"
+            href="#">
+            <span class="material-symbols-outlined text-[20px]">bar_chart</span>
+            <span class="text-sm font-medium">Analytics</span>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 rounded-lg transition-colors"
+            href="#">
+            <span class="material-symbols-outlined text-[20px]">work</span>
+            <span class="text-sm font-medium">Projects</span>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 bg-primary/20 text-slate-900 dark:text-white rounded-lg" href="#">
+            <span class="material-symbols-outlined text-[20px] fill-current">settings</span>
+            <span class="text-sm font-bold">Settings</span>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 rounded-lg transition-colors"
+            href="#">
+            <span class="material-symbols-outlined text-[20px]">help</span>
+            <span class="text-sm font-medium">Support</span>
+          </a>
+        </nav>
+      </div>
+      <div class="mt-auto p-6 border-t border-primary/10">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden"
+            data-alt="User profile avatar placeholder">
+            <img alt="User Avatar" class="w-full h-full object-cover" data-alt="Avatar icon for administrative user"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbJOevuAvRWzdDEaolQCKy4j_RRlfrGdNazzLnz_ltOrH2epQlk-2O6fLjeTwuERlMzXuAgwqx4yMx4ry6mPp5A9vDEhyvUzLH2ere6miqKAEpwDOsK5K_iBLFWiyeZrTHzOm7hVLWY4-BsbeyOlx93Ux8Sxrq7mKkfeYkBlrvDmZmICFjFmnpRGoNe3sU0Etgqf95hiU7hyole9gTgk0jUO5ysVLxwPNiJ27AeNpSuKFy0Y_aCsOulmBDPVnskmYrRn6QI7xB1mZv" />
+          </div>
+          <div>
+            <p class="text-sm font-bold truncate">Alex Rivera</p>
+            <p class="text-xs text-slate-500">Admin</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto">
+      <div class="max-w-5xl mx-auto p-8">
+        <!-- Header -->
+        <header class="mb-8">
+          <h2 class="text-4xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Settings</h2>
+          <p class="text-slate-500 mt-2">Manage your platform configuration, payment gateways, and system preferences.
+          </p>
+        </header>
+        <!-- Navigation Tabs -->
+        <nav class="flex border-b border-primary/20 mb-8 overflow-x-auto whitespace-nowrap scrollbar-hide">
+          <a class="px-6 py-4 text-sm font-bold border-b-2 border-primary text-slate-900 dark:text-slate-100"
+            href="#general">General Info</a>
+          <a class="px-6 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+            href="#payment">Payment Gateway</a>
+          <a class="px-6 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+            href="#tax">Tax Rules</a>
+          <a class="px-6 py-4 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+            href="#notifications">Notification Templates</a>
+        </nav>
+        <div class="space-y-12">
+          <!-- General Information Section -->
+          <section class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 shadow-sm overflow-hidden"
+            id="general">
+            <div class="p-6 border-b border-primary/10 flex justify-between items-center">
+              <div>
+                <h3 class="text-xl font-bold">General Information</h3>
+                <p class="text-sm text-slate-500">Basic identification and branding for your portal.</p>
+              </div>
+              <button
+                class="bg-primary text-slate-900 px-6 py-2 rounded-lg font-bold hover:brightness-110 transition-all text-sm">Save
+                Changes</button>
+            </div>
+            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-bold">Organization Name</label>
+                <input
+                  class="w-full bg-background-light dark:bg-slate-800 border-primary/20 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                  type="text" value="Solar Dynamics Inc." />
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-bold">Contact Email</label>
+                <input
+                  class="w-full bg-background-light dark:bg-slate-800 border-primary/20 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                  type="email" value="admin@solardynamics.com" />
+              </div>
+              <div class="space-y-2 md:col-span-2">
+                <label class="text-sm font-bold">Portal URL</label>
+                <div class="flex">
+                  <span
+                    class="inline-flex items-center px-4 rounded-l-lg border border-r-0 border-primary/20 bg-primary/5 text-slate-500 text-sm">https://</span>
+                  <input
+                    class="flex-1 min-w-0 bg-background-light dark:bg-slate-800 border-primary/20 rounded-r-lg focus:ring-primary focus:border-primary px-4 py-3"
+                    type="text" value="admin.solardynamics.io" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Payment Gateway Section -->
+          <section class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 shadow-sm overflow-hidden"
+            id="payment">
+            <div class="p-6 border-b border-primary/10 flex justify-between items-center">
+              <div>
+                <h3 class="text-xl font-bold">Payment Gateway</h3>
+                <p class="text-sm text-slate-500">Configure how you receive payments from your customers.</p>
+              </div>
+              <button
+                class="bg-primary text-slate-900 px-6 py-2 rounded-lg font-bold hover:brightness-110 transition-all text-sm">Update
+                Providers</button>
+            </div>
+            <div class="p-6 space-y-6">
+              <!-- Stripe -->
+              <div class="flex items-start gap-6 p-4 rounded-xl border border-primary/20 bg-primary/5">
+                <div
+                  class="w-12 h-12 flex-shrink-0 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center border border-slate-200 dark:border-slate-700">
+                  <span class="material-symbols-outlined text-[#635bff]">payments</span>
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-center mb-1">
+                    <h4 class="font-bold">Stripe</h4>
+                    <span
+                      class="px-2 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-[10px] font-bold rounded uppercase tracking-wider">Connected</span>
+                  </div>
+                  <p class="text-sm text-slate-500 mb-4">Accept credit cards and local payment methods globally.</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                      <p class="text-xs font-bold text-slate-400 uppercase">Publishable Key</p>
+                      <p class="text-sm font-mono truncate">pk_live_********************</p>
+                    </div>
+                    <div class="space-y-1">
+                      <p class="text-xs font-bold text-slate-400 uppercase">Secret Key</p>
+                      <p class="text-sm font-mono truncate">sk_live_********************</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- PayPal -->
+              <div class="flex items-start gap-6 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+                <div
+                  class="w-12 h-12 flex-shrink-0 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center border border-slate-200 dark:border-slate-700">
+                  <span class="material-symbols-outlined text-[#003087]">account_balance_wallet</span>
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-center mb-1">
+                    <h4 class="font-bold">PayPal</h4>
+                    <button class="text-primary text-xs font-bold hover:underline">Connect Account</button>
+                  </div>
+                  <p class="text-sm text-slate-500">Enable PayPal checkout and recurring subscriptions.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Tax Rules Section -->
+          <section class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 shadow-sm overflow-hidden"
+            id="tax">
+            <div class="p-6 border-b border-primary/10 flex justify-between items-center">
+              <div>
+                <h3 class="text-xl font-bold">Tax Rules</h3>
+                <p class="text-sm text-slate-500">Define tax rates based on customer location.</p>
+              </div>
+              <button
+                class="bg-primary/20 text-slate-900 dark:text-white border border-primary/30 px-6 py-2 rounded-lg font-bold hover:bg-primary/30 transition-all text-sm">Add
+                New Rule</button>
+            </div>
+            <div class="p-0">
+              <table class="w-full text-left text-sm">
+                <thead
+                  class="bg-background-light dark:bg-slate-800/50 text-slate-500 font-bold uppercase text-[10px] tracking-widest">
+                  <tr>
+                    <th class="px-6 py-3">Region</th>
+                    <th class="px-6 py-3">Tax Name</th>
+                    <th class="px-6 py-3">Rate</th>
+                    <th class="px-6 py-3 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-primary/10">
+                  <tr>
+                    <td class="px-6 py-4 font-medium">European Union</td>
+                    <td class="px-6 py-4">VAT</td>
+                    <td class="px-6 py-4">21.0%</td>
+                    <td class="px-6 py-4 text-right">
+                      <button class="text-slate-400 hover:text-primary"><span
+                          class="material-symbols-outlined">edit</span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 font-medium">United States (CA)</td>
+                    <td class="px-6 py-4">Sales Tax</td>
+                    <td class="px-6 py-4">8.25%</td>
+                    <td class="px-6 py-4 text-right">
+                      <button class="text-slate-400 hover:text-primary"><span
+                          class="material-symbols-outlined">edit</span></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- Notification Templates -->
+          <section
+            class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 shadow-sm overflow-hidden mb-12"
+            id="notifications">
+            <div class="p-6 border-b border-primary/10">
+              <h3 class="text-xl font-bold">Notification Templates</h3>
+              <p class="text-sm text-slate-500">Customize the automated emails sent to your users.</p>
+            </div>
+            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div
+                class="p-4 border border-primary/10 rounded-lg hover:border-primary/40 transition-colors group cursor-pointer bg-primary/[0.02]">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="material-symbols-outlined text-primary">mail</span>
+                  <span class="text-[10px] font-bold px-2 py-0.5 bg-primary/10 rounded uppercase">Active</span>
+                </div>
+                <h4 class="font-bold text-sm mb-1">Welcome Email</h4>
+                <p class="text-xs text-slate-500">Sent to new users upon registration.</p>
+              </div>
+              <div
+                class="p-4 border border-primary/10 rounded-lg hover:border-primary/40 transition-colors group cursor-pointer">
+                <div class="flex items-center justify-between mb-2">
+                  <span
+                    class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">receipt</span>
+                  <span
+                    class="text-[10px] font-bold px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded uppercase">System</span>
+                </div>
+                <h4 class="font-bold text-sm mb-1">Invoice Receipt</h4>
+                <p class="text-xs text-slate-500">Sent after a successful payment transaction.</p>
+              </div>
+              <div
+                class="p-4 border border-primary/10 rounded-lg hover:border-primary/40 transition-colors group cursor-pointer">
+                <div class="flex items-center justify-between mb-2">
+                  <span
+                    class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">priority_high</span>
+                  <span
+                    class="text-[10px] font-bold px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded uppercase">Urgent</span>
+                </div>
+                <h4 class="font-bold text-sm mb-1">Password Reset</h4>
+                <p class="text-xs text-slate-500">Instructions for users to recover their account.</p>
+              </div>
+              <div
+                class="p-4 border border-primary/10 rounded-lg hover:border-primary/40 transition-colors group cursor-pointer">
+                <div class="flex items-center justify-between mb-2">
+                  <span
+                    class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">notifications_active</span>
+                  <span class="text-[10px] font-bold px-2 py-0.5 bg-primary/10 rounded uppercase">Active</span>
+                </div>
+                <h4 class="font-bold text-sm mb-1">Project Milestone</h4>
+                <p class="text-xs text-slate-500">Notification when a project stage is completed.</p>
+              </div>
+            </div>
+            <div class="p-6 bg-primary/5 border-t border-primary/10 flex justify-end">
+              <button
+                class="bg-primary text-slate-900 px-6 py-2 rounded-lg font-bold hover:brightness-110 transition-all text-sm">Save
+                All Templates</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/settings.js"></script>
+</body>
+</html>

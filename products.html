@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SolarAdmin - Product Management</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/products.css" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside
+      class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col shrink-0">
+      <div class="p-6 flex flex-col gap-8 h-full">
+        <!-- Brand -->
+        <div class="flex items-center gap-3">
+          <div class="h-10 w-10 bg-primary rounded-lg flex items-center justify-center">
+            <span class="material-symbols-outlined text-background-dark">wb_sunny</span>
+          </div>
+          <div class="flex flex-col">
+            <h1 class="text-lg font-bold leading-none">SolarAdmin</h1>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Management Suite</p>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <nav class="flex flex-col gap-2 flex-1">
+          <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="text-sm font-medium">Dashboard</span>
+          </a>
+          <a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary text-background-dark font-semibold"
+            href="#">
+            <span class="material-symbols-outlined">inventory_2</span>
+            <span class="text-sm">Products</span>
+          </a>
+          <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">package_2</span>
+            <span class="text-sm font-medium">Inventory</span>
+          </a>
+          <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span class="text-sm font-medium">Orders</span>
+          </a>
+          <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            href="#">
+            <span class="material-symbols-outlined">settings</span>
+            <span class="text-sm font-medium">Settings</span>
+          </a>
+        </nav>
+        <!-- Profile Footer -->
+        <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+              <img alt="Admin User" data-alt="User profile avatar placeholder"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ4tMxRJuRD1GXXb5I7wKR1Q7YHC9IxPih2smCKoPn1q1IepCTa5Y5DcfhrD7iPNacdTkG_tP5uIVcdzCpNB0N3nmlrHijIFHPLDY4_H--Z1cCMxpgc76oeoJIHzWUp6Euia8McaVui1a7wSvwYWc-rgPkRAoDAzhumZN7Q79uV6uzDh8HleeCI3nG51GGVBN0KUYGljrt0nBxjh1Hbc_ghiLD6mekhMpMjt8GRPt-OAvo9V1kh6GSqk7QK-BW0-QqLn3PfLiad8Wl" />
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold">Alex Rivera</span>
+              <span class="text-xs text-slate-500">Fleet Manager</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col p-8 overflow-y-auto">
+      <!-- Header Section -->
+      <header class="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight">Solar Panels</h2>
+          <p class="text-slate-500 dark:text-slate-400 mt-1">Manage your solar hardware inventory and pricing.</p>
+        </div>
+        <button
+          class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-background-dark px-6 py-2.5 rounded-lg font-bold transition-all shadow-lg shadow-primary/20">
+          <span class="material-symbols-outlined text-xl">add_circle</span>
+          <span>Add New Product</span>
+        </button>
+      </header>
+      <!-- Table Container -->
+      <div
+        class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-50 dark:bg-slate-800/50 border-bottom border-slate-200 dark:border-slate-800">
+                <th
+                  class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider w-20">
+                  Image</th>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Name
+                </th>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  Brand</th>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  Wattage</th>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  Price</th>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  Stock Status</th>
+                <th
+                  class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">
+                  Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+              <!-- Product Row 1 -->
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4">
+                  <div
+                    class="h-12 w-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border border-slate-200 dark:border-slate-700">
+                    <div class="w-full h-full bg-gradient-to-br from-primary/20 to-primary/40"
+                      data-alt="Solar panel module product thumbnail"></div>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="font-semibold text-slate-900 dark:text-white">SunPower X-Series</span>
+                </td>
+                <td class="px-6 py-4 text-slate-600 dark:text-slate-400">SunPower</td>
+                <td class="px-6 py-4">
+                  <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded text-sm font-medium">400W</span>
+                </td>
+                <td class="px-6 py-4 font-bold text-slate-900 dark:text-white">$350.00</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary">
+                    <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                    In Stock
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <div class="flex items-center justify-end gap-2">
+                    <button class="p-2 text-slate-400 hover:text-primary transition-colors">
+                      <span class="material-symbols-outlined text-[20px]">edit</span>
+                    </button>
+                    <button class="p-2 text-slate-400 hover:text-red-500 transition-colors">
+                      <span class="material-symbols-outlined text-[20px]">delete</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <!-- Product Row 2 -->
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4">
+                  <div
+                    class="h-12 w-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border border-slate-200 dark:border-slate-700">
+                    <div class="w-full h-full bg-gradient-to-tr from-primary/10 to-blue-400/20"
+                      data-alt="Alternative solar module product photo"></div>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="font-semibold text-slate-900 dark:text-white">Canadian Solar HiKu</span>
+                </td>
+                <td class="px-6 py-4 text-slate-600 dark:text-slate-400">Canadian Solar</td>
+                <td class="px-6 py-4">
+                  <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded text-sm font-medium">330W</span>
+                </td>
+                <td class="px-6 py-4 font-bold text-slate-900 dark:text-white">$210.00</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-500">
+                    <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                    Low Stock
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <div class="flex items-center justify-end gap-2">
+                    <button class="p-2 text-slate-400 hover:text-primary transition-colors">
+                      <span class="material-symbols-outlined text-[20px]">edit</span>
+                    </button>
+                    <button class="p-2 text-slate-400 hover:text-red-500 transition-colors">
+                      <span class="material-symbols-outlined text-[20px]">delete</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <!-- Product Row 3 -->
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4">
+                  <div
+                    class="h-12 w-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border border-slate-200 dark:border-slate-700">
+                    <div class="w-full h-full bg-gradient-to-bl from-slate-400/20 to-primary/30"
+                      data-alt="High efficiency solar panel product shot"></div>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="font-semibold text-slate-900 dark:text-white">LG NeON 2</span>
+                </td>
+                <td class="px-6 py-4 text-slate-600 dark:text-slate-400">LG Solar</td>
+                <td class="px-6 py-4">
+                  <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded text-sm font-medium">450W</span>
+                </td>
+                <td class="px-6 py-4 font-bold text-slate-900 dark:text-white">$420.00</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary">
+                    <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                    In Stock
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <div class="flex items-center justify-end gap-2">
+                    <button class="p-2 text-slate-400 hover:text-primary transition-colors">
+                      <span class="material-symbols-outlined text-[20px]">edit</span>
+                    </button>
+                    <button class="p-2 text-slate-400 hover:text-red-500 transition-colors">
+                      <span class="material-symbols-outlined text-[20px]">delete</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <!-- Product Row 4 -->
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4">
+                  <div
+                    class="h-12 w-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border border-slate-200 dark:border-slate-700">
+                    <div class="w-full h-full bg-slate-200 dark:bg-slate-700 opacity-50"
+                      data-alt="Out of stock solar panel placeholder"></div>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="font-semibold text-slate-900 dark:text-white">First Solar Series 6</span>
+                </td>
+                <td class="px-6 py-4 text-slate-600 dark:text-slate-400">First Solar</td>
+                <td class="px-6 py-4">
+                  <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded text-sm font-medium">420W</span>
+                </td>
+                <td class="px-6 py-4 font-bold text-slate-900 dark:text-white">$290.00</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+                    <span class="h-1.5 w-1.5 rounded-full bg-slate-400 dark:bg-slate-600"></span>
+                    Out of Stock
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <div class="flex items-center justify-end gap-2">
+                    <button class="p-2 text-slate-400 hover:text-primary transition-colors">
+                      <span class="material-symbols-outlined text-[20px]">edit</span>
+                    </button>
+                    <button class="p-2 text-slate-400 hover:text-red-500 transition-colors">
+                      <span class="material-symbols-outlined text-[20px]">delete</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Pagination -->
+        <div
+          class="flex items-center justify-between px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-800">
+          <span class="text-sm text-slate-500 dark:text-slate-400">Showing 4 of 24 products</span>
+          <div class="flex items-center gap-2">
+            <button
+              class="h-8 w-8 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 disabled:opacity-50"
+              disabled="">
+              <span class="material-symbols-outlined text-sm">chevron_left</span>
+            </button>
+            <button
+              class="h-8 w-8 flex items-center justify-center rounded-lg bg-primary text-background-dark text-xs font-bold">1</button>
+            <button
+              class="h-8 w-8 flex items-center justify-center rounded-lg text-slate-600 dark:text-slate-400 text-xs hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">2</button>
+            <button
+              class="h-8 w-8 flex items-center justify-center rounded-lg text-slate-600 dark:text-slate-400 text-xs hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">3</button>
+            <button
+              class="h-8 w-8 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400">
+              <span class="material-symbols-outlined text-sm">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Stats Footer (Optional Enhancement) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <div class="bg-primary/5 dark:bg-primary/10 p-6 rounded-xl border border-primary/20">
+          <p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Total Products</p>
+          <p class="text-2xl font-black">24</p>
+        </div>
+        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+          <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Low Stock Alerts</p>
+          <p class="text-2xl font-black text-amber-500">2</p>
+        </div>
+        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+          <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Inventory Value</p>
+          <p class="text-2xl font-black">$12,450.00</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/products.js"></script>
+</body>
+</html>

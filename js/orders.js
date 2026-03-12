@@ -4,7 +4,6 @@ tailwind.config = {
     extend: {
       colors: {
         "primary": "#13ecc8",
-        "accent-orange": "#ff8c42",
         "background-light": "#f6f8f8",
         "background-dark": "#10221f",
       },

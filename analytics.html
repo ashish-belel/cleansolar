@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/analytics.css" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col">
+      <div class="p-6 flex items-center gap-3">
+        <div class="bg-primary size-10 rounded-lg flex items-center justify-center text-slate-900">
+          <span class="material-symbols-outlined font-bold">wb_sunny</span>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold leading-none">SolarAdmin</h1>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Management Portal</p>
+        </div>
+      </div>
+      <nav class="flex-1 px-4 py-4 space-y-2">
+        <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span class="font-medium">Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 rounded-lg active-nav text-primary transition-colors" href="#">
+          <span class="material-symbols-outlined">analytics</span>
+          <span class="font-medium text-slate-900 dark:text-slate-100">Analytics</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">payments</span>
+          <span class="font-medium">Sales</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">inventory_2</span>
+          <span class="font-medium">Inventory</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined">settings</span>
+          <span class="font-medium">Settings</span>
+        </a>
+      </nav>
+      <div class="p-4 mt-auto">
+        <div class="bg-primary/10 rounded-xl p-4 border border-primary/20">
+          <p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Upgrade Plan</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">Get advanced solar predictive analytics.</p>
+          <button
+            class="w-full bg-primary text-slate-900 text-sm font-bold py-2 rounded-lg hover:brightness-110 transition-all">Upgrade
+            Now</button>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col">
+      <!-- Header -->
+      <header
+        class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-8 flex items-center justify-between sticky top-0 z-10">
+        <div class="flex items-center gap-4">
+          <h2 class="text-xl font-bold">Analytics Overview</h2>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative w-64">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+            <input
+              class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm"
+              placeholder="Search reports..." type="text" />
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+              <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div class="h-8 w-[1px] bg-slate-200 dark:border-slate-800 mx-1"></div>
+            <div class="flex items-center gap-3">
+              <div class="text-right">
+                <p class="text-sm font-bold leading-none">Alex Rivera</p>
+                <p class="text-xs text-slate-500">Fleet Manager</p>
+              </div>
+              <div class="size-10 rounded-full bg-slate-200" data-alt="User profile avatar portrait"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDO30gUFJAlRdYmmkkjymxl2M_ImQBDut0q8961R2wtU0ZlPKQc40J4oZRQaetYS2cbqKH5hnHFC1OJDDHL7fus2eHDH5TiceLDwJxjgiNR3zSya948-kj2TCmrtY2jgVb4UsJinoj4M_Yn93uaugC1b_0kr1OtKy_na27MV9RcgS4N2aWZc0jmLH_iLesOs1dBPrfpcBpPxEE3FqWMlZYi1fnfs1Z9fG3ZBYTyBsk2Um8Aqa0KqQHP9znMVUJfy48_8Ur1L5DYQtCy'); background-size: cover;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Dashboard Content -->
+      <div class="p-8 space-y-8 overflow-y-auto">
+        <!-- Filters & Actions -->
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div
+            class="flex items-center gap-3 bg-white dark:bg-slate-900 p-1.5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <button class="px-4 py-2 text-sm font-medium rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800">Last 7
+              Days</button>
+            <button class="px-4 py-2 text-sm font-bold rounded-lg bg-primary text-slate-900 shadow-sm">Last 30
+              Days</button>
+            <button class="px-4 py-2 text-sm font-medium rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800">Last 12
+              Months</button>
+            <div class="w-[1px] h-6 bg-slate-200 dark:bg-slate-700 mx-2"></div>
+            <button
+              class="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800">
+              <span class="material-symbols-outlined text-lg">calendar_today</span>
+              Custom Range
+            </button>
+          </div>
+          <div class="flex items-center gap-3">
+            <button
+              class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg text-sm font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+              <span class="material-symbols-outlined text-lg">description</span>
+              Export PDF
+            </button>
+            <button
+              class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg text-sm font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+              <span class="material-symbols-outlined text-lg">table_view</span>
+              Export CSV
+            </button>
+          </div>
+        </div>
+        <!-- Metrics Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-slate-500 text-sm font-medium">Total Sales</span>
+              <span
+                class="bg-primary/20 text-emerald-600 dark:text-primary text-xs font-bold px-2 py-1 rounded-full">+12.5%</span>
+            </div>
+            <h3 class="text-3xl font-bold">$142,400</h3>
+            <div class="mt-4 h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-primary" style="width: 75%;"></div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-slate-500 text-sm font-medium">Website Traffic</span>
+              <span
+                class="bg-primary/20 text-emerald-600 dark:text-primary text-xs font-bold px-2 py-1 rounded-full">+8.2%</span>
+            </div>
+            <h3 class="text-3xl font-bold">84,200</h3>
+            <div class="mt-4 h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-primary" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-slate-500 text-sm font-medium">New Users</span>
+              <span
+                class="bg-orange-100 dark:bg-orange-900/30 text-orange-600 text-xs font-bold px-2 py-1 rounded-full">-2.4%</span>
+            </div>
+            <h3 class="text-3xl font-bold">1,240</h3>
+            <div class="mt-4 h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-orange-500" style="width: 45%;"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Charts Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Sales Trend -->
+          <div
+            class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex items-center justify-between mb-8">
+              <h4 class="text-lg font-bold">Sales &amp; Revenue Trend</h4>
+              <button class="text-slate-400 hover:text-slate-600"><span
+                  class="material-symbols-outlined">more_horiz</span></button>
+            </div>
+            <div class="h-64 flex items-end justify-between gap-2 px-2">
+              <div class="flex-1 bg-primary/20 hover:bg-primary transition-all rounded-t-lg h-[40%]" title="Jan"></div>
+              <div class="flex-1 bg-primary/20 hover:bg-primary transition-all rounded-t-lg h-[60%]" title="Feb"></div>
+              <div class="flex-1 bg-primary/20 hover:bg-primary transition-all rounded-t-lg h-[55%]" title="Mar"></div>
+              <div class="flex-1 bg-primary/20 hover:bg-primary transition-all rounded-t-lg h-[85%]" title="Apr"></div>
+              <div class="flex-1 bg-primary/20 hover:bg-primary transition-all rounded-t-lg h-[70%]" title="May"></div>
+              <div class="flex-1 bg-primary/20 hover:bg-primary transition-all rounded-t-lg h-[90%]" title="Jun"></div>
+              <div class="flex-1 bg-primary/20 hover:bg-primary transition-all rounded-t-lg h-[75%]" title="Jul"></div>
+            </div>
+            <div class="flex justify-between mt-4 text-xs font-bold text-slate-400 uppercase">
+              <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
+            </div>
+          </div>
+          <!-- User Growth -->
+          <div
+            class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex items-center justify-between mb-8">
+              <h4 class="text-lg font-bold">User Growth Distribution</h4>
+              <select class="bg-slate-50 dark:bg-slate-800 border-none text-sm font-bold rounded-lg py-1 px-3">
+                <option>By Region</option>
+                <option>By Source</option>
+              </select>
+            </div>
+            <div class="flex items-center justify-center py-4">
+              <div
+                class="relative size-56 flex items-center justify-center rounded-full border-[16px] border-primary/10 border-t-primary border-r-primary">
+                <div class="text-center">
+                  <p class="text-4xl font-bold">68%</p>
+                  <p class="text-xs text-slate-500 font-medium">Domestic Market</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mt-6">
+              <div class="flex items-center gap-2">
+                <div class="size-3 rounded-full bg-primary"></div>
+                <span class="text-sm font-medium">Domestic (68%)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="size-3 rounded-full bg-primary/30"></div>
+                <span class="text-sm font-medium">International (32%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Traffic Table -->
+        <div
+          class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+          <div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <h4 class="text-lg font-bold">Website Traffic Sources</h4>
+            <button class="text-primary text-sm font-bold hover:underline">View All Report</button>
+          </div>
+          <table class="w-full text-left">
+            <thead class="bg-slate-50 dark:bg-slate-800/50">
+              <tr>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Source Channel</th>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Visitors</th>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Avg. Session</th>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Conversion Rate</th>
+                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4 flex items-center gap-3">
+                  <span class="material-symbols-outlined text-slate-400">language</span>
+                  <span class="font-bold">Organic Search</span>
+                </td>
+                <td class="px-6 py-4 font-medium">42,501</td>
+                <td class="px-6 py-4 text-slate-500">4m 12s</td>
+                <td class="px-6 py-4">3.2%</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 text-[10px] font-bold rounded uppercase">Rising</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4 flex items-center gap-3">
+                  <span class="material-symbols-outlined text-slate-400">share</span>
+                  <span class="font-bold">Social Media</span>
+                </td>
+                <td class="px-6 py-4 font-medium">18,240</td>
+                <td class="px-6 py-4 text-slate-500">2m 45s</td>
+                <td class="px-6 py-4">2.8%</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-bold rounded uppercase">Stable</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                <td class="px-6 py-4 flex items-center gap-3">
+                  <span class="material-symbols-outlined text-slate-400">campaign</span>
+                  <span class="font-bold">Paid Ads</span>
+                </td>
+                <td class="px-6 py-4 font-medium">12,100</td>
+                <td class="px-6 py-4 text-slate-500">1m 30s</td>
+                <td class="px-6 py-4">5.4%</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 text-[10px] font-bold rounded uppercase">Rising</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/analytics.js"></script>
+</body>
+</html>
