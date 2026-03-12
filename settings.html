@@ -20,56 +20,60 @@
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
   <div class="flex h-screen overflow-hidden">
     <!-- Sidebar -->
-    <aside class="w-64 flex-shrink-0 border-r border-primary/10 bg-white dark:bg-slate-900 flex flex-col">
-      <div class="p-6">
-        <div class="flex items-center gap-3 mb-8">
-          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-slate-900">
-            <span class="material-symbols-outlined">wb_sunny</span>
-          </div>
-          <div class="flex flex-col">
-            <h1 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-none">SolarAdmin</h1>
-            <p class="text-primary text-xs font-medium">Management Portal</p>
-          </div>
+    <aside
+      class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col shrink-0">
+      <div class="p-6 flex items-center gap-3">
+        <div class="h-10 w-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+          <span class="material-symbols-outlined text-background-dark font-bold">wb_sunny</span>
         </div>
-        <nav class="space-y-1">
-          <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 rounded-lg transition-colors"
-            href="#">
-            <span class="material-symbols-outlined text-[20px]">dashboard</span>
-            <span class="text-sm font-medium">Dashboard</span>
-          </a>
-          <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 rounded-lg transition-colors"
-            href="#">
-            <span class="material-symbols-outlined text-[20px]">bar_chart</span>
-            <span class="text-sm font-medium">Analytics</span>
-          </a>
-          <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 rounded-lg transition-colors"
-            href="#">
-            <span class="material-symbols-outlined text-[20px]">work</span>
-            <span class="text-sm font-medium">Projects</span>
-          </a>
-          <a class="flex items-center gap-3 px-3 py-2 bg-primary/20 text-slate-900 dark:text-white rounded-lg" href="#">
-            <span class="material-symbols-outlined text-[20px] fill-current">settings</span>
-            <span class="text-sm font-bold">Settings</span>
-          </a>
-          <a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 rounded-lg transition-colors"
-            href="#">
-            <span class="material-symbols-outlined text-[20px]">help</span>
-            <span class="text-sm font-medium">Support</span>
-          </a>
-        </nav>
+        <div>
+          <h1 class="text-lg font-bold tracking-tight">SolarAdmin</h1>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Management Portal</p>
+        </div>
       </div>
-      <div class="mt-auto p-6 border-t border-primary/10">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden"
-            data-alt="User profile avatar placeholder">
-            <img alt="User Avatar" class="w-full h-full object-cover" data-alt="Avatar icon for administrative user"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbJOevuAvRWzdDEaolQCKy4j_RRlfrGdNazzLnz_ltOrH2epQlk-2O6fLjeTwuERlMzXuAgwqx4yMx4ry6mPp5A9vDEhyvUzLH2ere6miqKAEpwDOsK5K_iBLFWiyeZrTHzOm7hVLWY4-BsbeyOlx93Ux8Sxrq7mKkfeYkBlrvDmZmICFjFmnpRGoNe3sU0Etgqf95hiU7hyole9gTgk0jUO5ysVLxwPNiJ27AeNpSuKFy0Y_aCsOulmBDPVnskmYrRn6QI7xB1mZv" />
-          </div>
-          <div>
-            <p class="text-sm font-bold truncate">Alex Rivera</p>
-            <p class="text-xs text-slate-500">Admin</p>
-          </div>
-        </div>
+      <nav class="flex-1 px-4 py-4 space-y-1">
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-background-dark font-semibold transition-all"
+          href="#">
+          <span class="material-symbols-outlined fill-1">dashboard</span>
+          <span class="text-sm">Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+          href="#">
+          <span class="material-symbols-outlined">inventory_2</span>
+          <span class="text-sm">Products</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+          href="#">
+          <span class="material-symbols-outlined">group</span>
+          <span class="text-sm">Users</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+          href="#">
+          <span class="material-symbols-outlined">shopping_cart</span>
+          <span class="text-sm">Orders</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+          href="#">
+          <span class="material-symbols-outlined">list_alt</span>
+          <span class="text-sm">Listings</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+          href="#">
+          <span class="material-symbols-outlined">analytics</span>
+          <span class="text-sm">Analytics</span>
+        </a>
+      </nav>
+      <div class="px-4 py-4 border-t border-slate-200 dark:border-slate-800 space-y-1">
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+          href="#">
+          <span class="material-symbols-outlined">settings</span>
+          <span class="text-sm">Settings</span>
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+          href="#">
+          <span class="material-symbols-outlined">logout</span>
+          <span class="text-sm">Logout</span>
+        </a>
       </div>
     </aside>
     <!-- Main Content -->
@@ -293,4 +297,5 @@
   </div>
   <script src="js/settings.js"></script>
 </body>
+
 </html>
